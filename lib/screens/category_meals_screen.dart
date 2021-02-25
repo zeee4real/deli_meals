@@ -22,7 +22,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   void didChangeDependencies() {
     if (!loadedData) {
       loadedData = true;
-      // TODO: implement didChangeDependencies
       final routeArgs =
           ModalRoute.of(context).settings.arguments as Map<String, String>;
       categoryTitle = routeArgs['title'];
@@ -55,7 +54,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
             duration: categoryMeals[index].duration,
             imageUrl: categoryMeals[index].imageUrl,
             complexity: categoryMeals[index].complexity,
-            removeItem: _removeMeal,
           );
         },
         itemCount: categoryMeals.length,
